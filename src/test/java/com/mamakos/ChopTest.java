@@ -1,10 +1,11 @@
 package com.mamakos;
 
 import junit.framework.TestCase;
+import org.junit.Ignore;
 import org.junit.Test;
 
-public class ChopTest extends TestCase {
-
+public class ChopTest {
+    @Test
     public void testChop() {
         IChop c = new Chop1();
         assert -1 == c.chop(3, new int[]{}) : "Test 1: Failed";
@@ -28,7 +29,7 @@ public class ChopTest extends TestCase {
         assert -1 == c.chop(8, new int[]{1, 3, 5, 7}) : "Test 19: Failed";
         assert 13 == c.chop(100, new int[]{1, 3, 5, 7,9,11,33,44,55,66,77,88,99,100,101,999}) : "Test 20: Failed";
     }
-
+    @Test
     public void testChop2() {
         IChop c = new Chop2();
         assert -1 == c.chop(3, new int[]{}) : "Test 1: Failed";
